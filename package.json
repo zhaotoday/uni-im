@@ -1,6 +1,6 @@
 {
   "name": "uni-im",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,13 @@
   },
   "homepage": "https://github.com/zhaotoday/uni-im#readme",
   "dependencies": {
+    "@vue/composition-api": "1.5.0",
+    "dayjs": "1.11.1",
+    "eventemitter2": "6.4.5",
     "jt-helpers": "1.0.11",
-    "vue-mobile": "1.3.8"
+    "plus-websocket": "1.0.5",
+    "vue-mobile": "1.3.8",
+    "vue-validation": "1.0.3",
+    "wx-bridge": "0.0.39"
   }
 }
