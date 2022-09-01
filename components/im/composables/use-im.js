@@ -1,6 +1,5 @@
 import wx from "wx-bridge";
 import { Ws } from "../utils/ws.class";
-import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import dayjs from "dayjs";
 
@@ -8,9 +7,7 @@ const { ApiUrl, WsUrl } = useConsts();
 
 const ws = new Ws({ url: WsUrl });
 
-export const useIm = () => {
-  const { user } = useUsers();
-
+export const useIm = ({ user }) => {
   const initialize = () => {
     const timers = {};
 
