@@ -1,4 +1,5 @@
 import { useIm } from "../../composables/use-im";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   props: {
@@ -9,7 +10,8 @@ export default {
   },
   emits: ["goto-chat"],
   setup() {
-    const { getAvatarUrl } = useIm();
+    const { user } = useUsers();
+    const { getAvatarUrl } = useIm({ user });
 
     return {
       getAvatarUrl,

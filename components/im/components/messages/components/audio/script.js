@@ -1,4 +1,5 @@
 import { useIm } from "../../../../composables/use-im";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   props: {
@@ -17,7 +18,8 @@ export default {
   },
   emits: ["play-index-change"],
   setup(props, context) {
-    const { getFileUrl } = useIm();
+    const { user } = useUsers();
+    const { getFileUrl } = useIm({ user });
 
     const innerAudioContext = uni.createInnerAudioContext();
 
